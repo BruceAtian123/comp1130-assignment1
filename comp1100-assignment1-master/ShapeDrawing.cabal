@@ -1,0 +1,103 @@
+Name:                ShapeDrawing
+Version:             0.3.2.0
+Author:              Steven X. Han
+Maintainer:          steven.han@anu.edu.au       
+Category:            Graphics
+Build-Type:          Simple
+Extra-Source-Files:  ChangeLog.md
+Cabal-Version:       >= 1.20
+Homepage:            https://cs.anu.edu.au/courses/comp1100
+
+Source-Repository head
+    type:     git
+    location: https://gitlab.cecs.anu.edu.au/comp1100/comp1100-assignment1.git
+
+Executable Warmup
+    main-is:
+        Warmup.hs
+        
+    build-depends:       
+        base >= 4.10.1 && < 4.11,
+        codeworld-api == 0.2.2.1,
+        text >= 1.2.2 && < 1.3
+    
+    hs-source-dirs:
+        src
+        
+    default-language:
+        Haskell2010
+        
+    ghc-options:
+        -Wall -threaded
+
+Executable WarmupInteraction
+    main-is:
+        WarmupInteraction.hs
+
+    build-depends:
+        base >= 4.10.1 && < 4.11,
+        codeworld-api == 0.2.2.1,
+        text >= 1.2.2 && < 1.3
+
+    hs-source-dirs:
+        src
+
+    default-language:
+        Haskell2010
+
+    ghc-options:
+        -Wall -threaded
+
+Executable TypeToDraw
+    main-is:
+        TypeToDraw.hs
+    other-modules:
+        View,
+        Shape,
+        State,
+        ColourName,
+        Graphic
+        
+    build-depends:       
+        base >= 4.10.1 && < 4.11,
+        codeworld-api == 0.2.2.1,
+        text >= 1.2.2 && < 1.3,
+        doctest >= 0.14,
+        safe >= 0.3.16
+    
+    hs-source-dirs:
+        src
+        
+    default-language:
+        Haskell2010
+        
+    ghc-options:
+        -Wall -threaded
+        
+Executable ClickToDraw
+    main-is:             
+        ClickToDraw.hs
+    other-modules:       
+        ColourName,
+        Events,
+        View,
+        Shape,
+        State,
+        Graphic
+                       
+    build-depends:       
+        base >= 4.10.1 && < 4.11,
+        codeworld-api == 0.2.2.1,
+        text >= 1.2.2 && < 1.3,
+        doctest >= 0.14
+  
+    hs-source-dirs:      
+        src
+  
+    default-language:    
+        Haskell2010
+  
+    ghc-options:         
+        -Wall -threaded
+        
+
